@@ -1,27 +1,27 @@
-package com.example.omdb_kmp.android
+package com.example.omdb_kmp.android.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.omdb_kmp.Greeting
+import com.example.omdb_kmp.android.theme.OMDbKmpTheme
+import com.example.omdb_kmp.android.util.UltraPreview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
+            OMDbKmpTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    GreetingView("Hello Pranit!")
                 }
             }
         }
@@ -30,13 +30,16 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GreetingView(text: String) {
-    Text(text = text)
+    Text(
+        modifier = Modifier.fillMaxSize(),
+        text = text
+    )
 }
 
-@Preview
+@UltraPreview
 @Composable
 fun DefaultPreview() {
-    MyApplicationTheme {
+    OMDbKmpTheme {
         GreetingView("Hello, Android!")
     }
 }
