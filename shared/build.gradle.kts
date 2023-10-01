@@ -29,6 +29,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(libs.coroutines.core)
             }
         }
         val commonTest by getting {
@@ -38,6 +39,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(libs.coroutines.android)
             }
         }
         val androidUnitTest by getting

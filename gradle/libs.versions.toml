@@ -9,10 +9,13 @@ androidGradlePlugin = "8.1.2"
 composeCompiler = "1.5.3"
 
 # Dependencies
-androidxActivity = "1.7.2"
+androidxCore = "1.12.0"
+androidxActivity = "1.8.0-rc01"
 composeBom = "2023.09.02"
+coroutines = "1.7.2"
 
 [libraries]
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
 
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
@@ -21,6 +24,9 @@ compose-material3 = { module = "androidx.compose.material3:material3" }
 compose-foundation = { module = "androidx.compose.foundation:foundation" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 
 [plugins]
 ## add plugins here
