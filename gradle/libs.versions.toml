@@ -11,12 +11,14 @@ composeCompiler = "1.5.3"
 # Dependencies
 androidxCore = "1.12.0"
 androidxActivity = "1.8.0-rc01"
+androidxNavigation = "2.7.3"
 composeBom = "2023.09.02"
 coroutines = "1.7.2"
 
 [libraries]
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
 
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 compose-ui = { module = "androidx.compose.ui:ui" }
