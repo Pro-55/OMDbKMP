@@ -11,7 +11,7 @@ struct SignupScreen: View {
     @Binding var hasSignedUp: Bool
     
     var body: some View {
-        VStack{
+        VStack {
             Text("Auth!")
             Button("Sign Up") {
                 hasSignedUp = false

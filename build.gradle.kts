@@ -5,6 +5,8 @@ plugins {
     id("com.android.library") version libs.versions.androidGradlePlugin.get() apply false
     kotlin("android") version libs.versions.kotlin.get() apply false
     kotlin("multiplatform") version libs.versions.kotlin.get() apply false
+    id("com.google.gms.google-services") version libs.versions.googleServicesGradlePlugin apply false
+    id("com.google.firebase.crashlytics") version libs.versions.fiebaseCrashlyticsGradlePlugin apply false
 }
 
 tasks.register("clean", Delete::class) {
