@@ -1,17 +1,22 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
+
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
 }
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_17.toString()))
+        languageVersion.set(JavaLanguageVersion.of(getJvmTarget().target))
     }
 
     androidTarget {
         compilations.all {
-            kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_17.toString()
+            tasks.withType<KotlinJvmCompile>().configureEach {
+                compilerOptions {
+                    jvmTarget.set(getJvmTarget())
+                }
             }
         }
     }
@@ -71,3 +76,5 @@ android {
         minSdk = libs.versions.minSdk.get().toInt()
     }
 }
+
+fun getJvmTarget(): JvmTarget = JvmTarget.JVM_17

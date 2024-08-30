@@ -1,8 +1,9 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
+    alias(libs.plugins.android.gradle)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -11,14 +12,14 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = getVersionCode()
+        versionName = getVersionName()
     }
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+    composeCompiler {
+        enableStrongSkippingMode = true
     }
     buildTypes {
         getByName("debug") {
@@ -42,16 +43,16 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = getJavaVersion()
+        targetCompatibility = getJavaVersion()
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = getJavaVersion().toString()
     }
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(projects.shared)
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.activity.compose)
@@ -68,3 +69,19 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics)
 }
+
+fun getVersionCode(): Int {
+    val major = libs.versions.major.get().toInt() * 100000
+    val minor = libs.versions.minor.get().toInt() * 100
+    val hotfix = libs.versions.hotfix.get().toInt()
+    return 100000000 + major + minor + hotfix
+}
+
+fun getVersionName(): String {
+    val major = libs.versions.major.get()
+    val minor = libs.versions.minor.get()
+    val hotfix = libs.versions.hotfix.get()
+    return "$major.$minor.$hotfix"
+}
+
+fun getJavaVersion(): JavaVersion = JavaVersion.VERSION_17
