@@ -1,9 +1,9 @@
-package com.example.omdb_kmp.util.extensions
+package com.papslabs.omdb_kmp.util.extensions
 
-import com.example.omdb_kmp.data.model.Resource
-import com.example.omdb_kmp.util.Constants
-import com.example.omdb_kmp.util.DispatcherProvider
-import com.example.omdb_kmp.util.wrappers.NativeFlow
+import com.papslabs.omdb_kmp.data.model.Resource
+import com.papslabs.omdb_kmp.util.Constants
+import com.papslabs.omdb_kmp.util.DispatcherProvider
+import com.papslabs.omdb_kmp.util.wrappers.NativeFlow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.distinctUntilChanged

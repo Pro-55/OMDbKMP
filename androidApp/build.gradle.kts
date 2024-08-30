@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.omdb_kmp.android"
+    namespace = "com.papslabs.omdb_kmp.android"
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()

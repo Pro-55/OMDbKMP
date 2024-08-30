@@ -482,7 +482,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.omdb-kmp.iosApp.debug";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.iosApp.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -516,7 +516,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.omdb-kmp.iosApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.iosApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

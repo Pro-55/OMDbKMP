@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.ui
+package com.papslabs.omdb_kmp.android.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,11 +11,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.example.omdb_kmp.android.framework.navigation.Route
-import com.example.omdb_kmp.android.framework.navigation.nav_graph.appNavGraph
-import com.example.omdb_kmp.android.framework.navigation.nav_graph.authNavGraph
-import com.example.omdb_kmp.android.framework.navigation.nav_graph.routerNavGraph
-import com.example.omdb_kmp.android.theme.OMDbKmpTheme
+import com.papslabs.omdb_kmp.android.framework.navigation.Route
+import com.papslabs.omdb_kmp.android.framework.navigation.nav_graph.appNavGraph
+import com.papslabs.omdb_kmp.android.framework.navigation.nav_graph.authNavGraph
+import com.papslabs.omdb_kmp.android.framework.navigation.nav_graph.routerNavGraph
+import com.papslabs.omdb_kmp.android.theme.OMDbKmpTheme
 
 class MainActivity : ComponentActivity() {
 

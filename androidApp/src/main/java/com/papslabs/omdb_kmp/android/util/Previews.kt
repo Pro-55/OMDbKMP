@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.util
+package com.papslabs.omdb_kmp.android.util
 
 import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES

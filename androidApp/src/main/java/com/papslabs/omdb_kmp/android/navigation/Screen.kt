@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.framework.navigation
+package com.papslabs.omdb_kmp.android.framework.navigation
 
 sealed class Screen(val route: String) {
     data object Router : Screen(route = "screen_router")

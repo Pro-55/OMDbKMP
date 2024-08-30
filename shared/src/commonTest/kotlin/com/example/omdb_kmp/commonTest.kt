@@ -1,4 +1,4 @@
-package com.example.omdb_kmp
+package com.papslabs.omdb_kmp
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
