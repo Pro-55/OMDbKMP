@@ -1,44 +1,58 @@
 [versions]
 ## SDK Versions
-minSdk = "21"
-targetSdk = "34"
 compileSdk = "34"
+minSdk = "23"
+targetSdk = "34"
 
-kotlin = "1.9.10"
-androidGradlePlugin = "8.1.2"
-composeCompiler = "1.5.3"
-googleServicesGradlePlugin = "4.3.15"
-fiebaseCrashlyticsGradlePlugin = "2.9.9"
+## App Versions
+major = "1"
+minor = "0"
+hotfix = "0"
+
+## Gradle
+androidGradlePlugin = "8.5.2"
+firebaseCrashlyticsGradlePlugin = "3.0.2"
+googleServicesGradlePlugin = "4.4.2"
+kotlin = "2.0.0"
 
 # Dependencies
-androidxCore = "1.12.0"
-androidxActivity = "1.8.0-rc01"
-androidxNavigation = "2.7.3"
-composeBom = "2023.09.02"
-coroutines = "1.7.2"
-firebaseBom = "32.3.1"
+androidXActivity = "1.9.1"
+androidXCore = "1.13.1"
+androidXNavigation = "2.7.7"
+composeBom = "2024.08.00"
+kotlinx = "1.8.1"
+firebaseBom = "33.2.0"
 
 [libraries]
-androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
-androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidXActivity" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidXCore" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidXNavigation" }
 
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
-compose-ui = { module = "androidx.compose.ui:ui" }
-compose-material3 = { module = "androidx.compose.material3:material3" }
 compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
-
-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx" }
 
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx" }
+
 [plugins]
-## add plugins here
+android-gradle = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsGradlePlugin" }
+
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesGradlePlugin" }
+
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 
 [bundles]
 ## add bundled up libs here eg.
