@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.data.model
+package com.papslabs.omdb_kmp.data.model
 
 sealed class Resource<T>(val msg: String? = null, val data: T? = null) {
     class Loading<T> : Resource<T>()

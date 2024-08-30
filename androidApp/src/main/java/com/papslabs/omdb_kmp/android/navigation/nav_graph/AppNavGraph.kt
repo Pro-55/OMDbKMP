@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.framework.navigation.nav_graph
+package com.papslabs.omdb_kmp.android.framework.navigation.nav_graph
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -7,8 +7,8 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
-import com.example.omdb_kmp.android.framework.navigation.Route
-import com.example.omdb_kmp.android.framework.navigation.Screen
+import com.papslabs.omdb_kmp.android.framework.navigation.Route
+import com.papslabs.omdb_kmp.android.framework.navigation.Screen
 
 fun NavGraphBuilder.appNavGraph(navController: NavController) {
     navigation(

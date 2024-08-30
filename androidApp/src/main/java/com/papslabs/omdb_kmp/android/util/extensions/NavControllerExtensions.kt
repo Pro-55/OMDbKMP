@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.util.extensions
+package com.papslabs.omdb_kmp.android.util.extensions
 
 import androidx.navigation.NavController
 

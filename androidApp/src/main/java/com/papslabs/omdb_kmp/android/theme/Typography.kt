@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.theme
+package com.papslabs.omdb_kmp.android.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

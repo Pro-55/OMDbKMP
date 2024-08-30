@@ -1,6 +1,6 @@
-package com.example.omdb_kmp.data.repository.impl
+package com.papslabs.omdb_kmp.data.repository.impl
 
-import com.example.omdb_kmp.data.repository.contract.Repository
+import com.papslabs.omdb_kmp.data.repository.contract.Repository
 
 class RepositoryImpl : Repository {
 }

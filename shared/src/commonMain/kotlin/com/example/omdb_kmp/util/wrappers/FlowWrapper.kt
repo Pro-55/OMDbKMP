@@ -1,7 +1,7 @@
-package com.example.omdb_kmp.util.wrappers
+package com.papslabs.omdb_kmp.util.wrappers
 
-import com.example.omdb_kmp.data.model.Resource
-import com.example.omdb_kmp.util.extensions.asResourceFlow
+import com.papslabs.omdb_kmp.data.model.Resource
+import com.papslabs.omdb_kmp.util.extensions.asResourceFlow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

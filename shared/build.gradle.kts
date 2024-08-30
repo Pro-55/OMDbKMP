@@ -34,7 +34,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.coroutines.core)
+                implementation(libs.kotlinx.coroutines.core)
             }
         }
         val commonTest by getting {
@@ -44,7 +44,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation(libs.coroutines.android)
+                implementation(libs.kotlinx.coroutines.android)
             }
         }
         val androidUnitTest by getting
@@ -70,7 +70,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.omdb_kmp"
+    namespace = "com.papslabs.omdb_kmp"
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()

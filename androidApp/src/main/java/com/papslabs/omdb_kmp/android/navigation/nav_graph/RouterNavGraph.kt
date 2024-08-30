@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.framework.navigation.nav_graph
+package com.papslabs.omdb_kmp.android.framework.navigation.nav_graph
 
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -8,9 +8,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
-import com.example.omdb_kmp.android.framework.navigation.Route
-import com.example.omdb_kmp.android.framework.navigation.Screen
-import com.example.omdb_kmp.android.util.extensions.navigateWithPopUpTo
+import com.papslabs.omdb_kmp.android.framework.navigation.Route
+import com.papslabs.omdb_kmp.android.framework.navigation.Screen
+import com.papslabs.omdb_kmp.android.util.extensions.navigateWithPopUpTo
 
 fun NavGraphBuilder.routerNavGraph(navController: NavController) {
     navigation(

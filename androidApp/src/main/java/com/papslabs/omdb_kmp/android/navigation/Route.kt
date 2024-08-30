@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.android.framework.navigation
+package com.papslabs.omdb_kmp.android.framework.navigation
 
 sealed class Route(val name: String) {
     data object Root : Route(name = "route_root")

@@ -1,4 +1,4 @@
-package com.example.omdb_kmp.util
+package com.papslabs.omdb_kmp.util
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

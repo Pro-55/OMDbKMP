@@ -1,4 +1,4 @@
-package com.example.omdb_kmp
+package com.papslabs.omdb_kmp
 
 import org.junit.Assert.assertTrue
 import org.junit.Test
