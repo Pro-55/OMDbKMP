@@ -20,10 +20,13 @@ import com.papslabs.omdb_kmp.android.util.extensions.navigateWithPopUpTo
 
 fun NavGraphBuilder.authNavGraph(navController: NavController) {
     navigation(
-        startDestination = Screen.Signup.route,
-        route = Route.Auth.name
+        route = Route.Auth.name,
+        startDestination = Screen.SignUp.route
     ) {
-        composable(route = Screen.Signup.route) {
+        composable(
+            route = Screen.SignUp.route,
+            arguments = Screen.SignUp.arguments
+        ) {
             // TODO: ADD AUTH SCREEN
             Column(
                 modifier = Modifier

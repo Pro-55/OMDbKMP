@@ -14,8 +14,8 @@ import com.papslabs.omdb_kmp.android.util.extensions.navigateWithPopUpTo
 
 fun NavGraphBuilder.routerNavGraph(navController: NavController) {
     navigation(
-        startDestination = Screen.Router.route,
-        route = Route.Router.name
+        route = Route.Router.name,
+        startDestination = Screen.Router.route
     ) {
         composable(route = Screen.Router.route) {
             // TODO: ADD SHARED PREF LOGIC
