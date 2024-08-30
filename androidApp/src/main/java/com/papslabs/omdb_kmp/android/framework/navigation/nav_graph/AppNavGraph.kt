@@ -10,17 +10,23 @@ import androidx.navigation.compose.navigation
 import com.papslabs.omdb_kmp.android.framework.navigation.Route
 import com.papslabs.omdb_kmp.android.framework.navigation.Screen
 
-fun NavGraphBuilder.appNavGraph(navController: NavController) {
+fun NavGraphBuilder.appNavGraph(
+    navController: NavController,
+    onBack: () -> Unit
+) {
     navigation(
-        startDestination = Screen.Home.route,
-        route = Route.App.name
+        route = Route.App.name,
+        startDestination = Screen.Home.route
     ) {
-        composable(route = Screen.Home.route) {
+        composable(
+            route = Screen.Home.route,
+            arguments = Screen.Home.arguments
+        ) {
             // TODO: ADD APP SCREENS
             Text(
                 modifier = Modifier
                     .fillMaxSize(),
-                text = "Home!",
+                text = "Home!"
             )
         }
     }

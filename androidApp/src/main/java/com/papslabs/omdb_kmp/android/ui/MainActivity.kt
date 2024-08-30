@@ -17,7 +17,7 @@ import com.papslabs.omdb_kmp.android.framework.navigation.nav_graph.authNavGraph
 import com.papslabs.omdb_kmp.android.framework.navigation.nav_graph.routerNavGraph
 import com.papslabs.omdb_kmp.android.theme.OMDbKmpTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity: ComponentActivity() {
 
     // Global
     private val TAG = MainActivity::class.java.simpleName
@@ -37,11 +37,14 @@ class MainActivity : ComponentActivity() {
                         NavHost(
                             navController = navController,
                             startDestination = Route.Router.name,
-                            route = Route.Root.name,
+                            route = Route.Root.name
                         ) {
                             routerNavGraph(navController = navController)
                             authNavGraph(navController = navController)
-                            appNavGraph(navController = navController)
+                            appNavGraph(
+                                navController = navController,
+                                onBack = onBackPressedDispatcher::onBackPressed
+                            )
                         }
                     }
                 }
