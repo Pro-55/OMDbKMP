@@ -35,6 +35,11 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.kotlinx.coroutines.core)
+
+                implementation(libs.koin.core)
+                implementation(libs.koin.test)
+
+                api(libs.datastore.core)
             }
         }
         val commonTest by getting {
@@ -45,6 +50,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(libs.kotlinx.coroutines.android)
+
+                implementation(libs.koin.android)
             }
         }
         val androidUnitTest by getting
