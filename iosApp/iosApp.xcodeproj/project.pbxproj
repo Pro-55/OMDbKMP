@@ -18,6 +18,7 @@
 		15D0EAFE2ACB53E500800946 /* FlowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EAFD2ACB53E500800946 /* FlowExtensions.swift */; };
 		15D0EB012ACB541B00800946 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EB002ACB541B00800946 /* HomeScreen.swift */; };
 		15D0EB042ACB544200800946 /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EB032ACB544200800946 /* SignupScreen.swift */; };
+		F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		15D0EB032ACB544200800946 /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				15D0EAF82ACB539B00800946 /* NavHost.swift */,
 				15D0EAFA2ACB53AF00800946 /* Route.swift */,
+				F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				15D0EAFB2ACB53AF00800946 /* Route.swift in Sources */,
 				15D0EB042ACB544200800946 /* SignupScreen.swift in Sources */,
 				15D0EB012ACB541B00800946 /* HomeScreen.swift in Sources */,
+				F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */,
 				15D0EAF52ACB532D00800946 /* iOSApp.swift in Sources */,
 				15D0EAF92ACB539B00800946 /* NavHost.swift in Sources */,
 				15D0EAFE2ACB53E500800946 /* FlowExtensions.swift in Sources */,

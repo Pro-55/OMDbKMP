@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct NavHost: View {
-    @State public var stack = [Route]()
-    @State public var hasSignedUp = true
+    @StateObject private var viewModel = NavHostViewModel()
+    @State private var stack: [Route] = []
+    @State private var hasSignedUp: Bool?
     
     var body: some View {
         NavigationStack(path: $stack) {
             getRoot(hasSignedUp: hasSignedUp).navigationDestination(for: Route.self) { route in
-                switch(route) {
+                switch route {
                 case .Signup:
                     SignupScreen(hasSignedUp: $hasSignedUp)
                 case .Home:
@@ -26,13 +27,19 @@ struct NavHost: View {
                 }
             }
         }
+        .onChange(of: viewModel.loginStatus) {
+            hasSignedUp = viewModel.loginStatus
+        }
     }
     
-    private func getRoot(hasSignedUp: Bool) -> some View {
-        if hasSignedUp {
-            return AnyView(SignupScreen(hasSignedUp: $hasSignedUp))
-        } else {
+    private func getRoot(hasSignedUp: Bool?) -> some View {
+        switch hasSignedUp {
+        case true:
             return AnyView(HomeScreen(stack: $stack))
+        case false:
+            return AnyView(SignupScreen(hasSignedUp: $hasSignedUp))
+        default:
+            return AnyView(EmptyView())
         }
     }
 }

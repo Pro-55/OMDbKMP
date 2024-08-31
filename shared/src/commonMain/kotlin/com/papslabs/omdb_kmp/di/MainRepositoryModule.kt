@@ -5,5 +5,5 @@ import com.papslabs.omdb_kmp.domain.repository.MainRepository
 import org.koin.dsl.module
 
 val mainRepositoryModule = module {
-    single<MainRepository> { MainRepositoryImpl() }
+    single<MainRepository> { MainRepositoryImpl(get()) }
 }
