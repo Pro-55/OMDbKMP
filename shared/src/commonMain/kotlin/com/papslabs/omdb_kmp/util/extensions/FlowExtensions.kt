@@ -1,6 +1,6 @@
 package com.papslabs.omdb_kmp.util.extensions
 
-import com.papslabs.omdb_kmp.data.model.Resource
+import com.papslabs.omdb_kmp.domain.model.Resource
 import com.papslabs.omdb_kmp.util.Constants
 import com.papslabs.omdb_kmp.util.DispatcherProvider
 import com.papslabs.omdb_kmp.util.wrappers.NativeFlow

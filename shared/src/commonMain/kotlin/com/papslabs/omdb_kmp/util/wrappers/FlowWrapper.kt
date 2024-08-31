@@ -1,6 +1,6 @@
 package com.papslabs.omdb_kmp.util.wrappers
 
-import com.papslabs.omdb_kmp.data.model.Resource
+import com.papslabs.omdb_kmp.domain.model.Resource
 import com.papslabs.omdb_kmp.util.extensions.asResourceFlow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -28,7 +28,7 @@ fun <T> resourceFlow(
  */
 class NativeFlow<T>(
     private val resourceFlow: Flow<Resource<T>>
-) : Flow<Resource<T>> by resourceFlow {
+): Flow<Resource<T>> by resourceFlow {
     fun callbacks(
         onLoading: () -> Unit,
         onSuccess: (T?) -> Unit,
