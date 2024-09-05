@@ -16,14 +16,24 @@ android {
         versionName = getVersionName()
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeCompiler {
         enableStrongSkippingMode = true
     }
+    signingConfigs {
+        create("config") {
+            storeFile = file(project.property("STORE_PATH") as String)
+            storePassword = project.property("STORE_PASSWORD") as String
+            keyAlias = project.property("KEY_ALIAS") as String
+            keyPassword = project.property("KEY_PASSWORD") as String
+        }
+    }
     buildTypes {
-        getByName("debug") {
+        debug {
             applicationIdSuffix = ".debug"
+            signingConfig = signingConfigs.getByName("config")
             isDebuggable = true
             isMinifyEnabled = false
             isShrinkResources = false
@@ -32,7 +42,8 @@ android {
                 "proguard-rules.pro"
             )
         }
-        getByName("release") {
+        release {
+            signingConfig = signingConfigs.getByName("config")
             isDebuggable = false
             isMinifyEnabled = true
             isShrinkResources = true
