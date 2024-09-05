@@ -169,13 +169,13 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				1532C7E92ACC595800B1A3BC /* firebase */,
-				15D0EAF72ACB538900800946 /* navigation */,
-				15D0EAF62ACB538200800946 /* util */,
-				15D0EAF22ACB530100800946 /* ui */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
+				1532C7E92ACC595800B1A3BC /* firebase */,
 				7555FF8C242A565B00829871 /* Info.plist */,
+				15D0EAF72ACB538900800946 /* navigation */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				15D0EAF22ACB530100800946 /* ui */,
+				15D0EAF62ACB538200800946 /* util */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.iosApp.debug";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.ios.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -520,7 +520,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.iosApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.papslabs.omdb-kmp.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
