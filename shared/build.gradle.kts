@@ -4,6 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.room)
 }
 
 kotlin {
@@ -28,6 +30,7 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
+            linkerOpts.add("-lsqlite3")
         }
     }
 
@@ -40,6 +43,9 @@ kotlin {
                 implementation(libs.koin.test)
 
                 api(libs.datastore.core)
+
+                implementation(libs.room.runtime)
+                implementation(libs.sqlite.bundled)
             }
         }
         val commonTest by getting {
@@ -52,6 +58,8 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.android)
 
                 implementation(libs.koin.android)
+
+                implementation(libs.room.runtime.android)
             }
         }
         val androidUnitTest by getting
@@ -82,6 +90,14 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
+}
+
+dependencies {
+    ksp(libs.room.compiler)
 }
 
 fun getJvmTarget(): JvmTarget = JvmTarget.JVM_17

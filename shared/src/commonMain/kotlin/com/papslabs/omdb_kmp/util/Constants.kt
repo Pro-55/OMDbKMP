@@ -2,6 +2,7 @@ package com.papslabs.omdb_kmp.util
 
 object Constants {
     internal const val OMDB_KMP_SHARED_PREFS = "omdb_kmp_shared.preferences_pb"
+    internal const val OMDB_KMP_DB = "omdb.db"
 
     const val KEY_SIGN_UP_STATUS = "sign_up_status"
 

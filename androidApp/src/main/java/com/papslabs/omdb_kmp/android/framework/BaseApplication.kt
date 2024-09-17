@@ -2,6 +2,8 @@ package com.papslabs.omdb_kmp.android.framework
 
 import android.app.Application
 import com.papslabs.omdb_kmp.android.di.viewModelModule
+import com.papslabs.omdb_kmp.di.appDatabaseBuilderModule
+import com.papslabs.omdb_kmp.di.appDatabaseModule
 import com.papslabs.omdb_kmp.di.dataStoreModule
 import com.papslabs.omdb_kmp.di.mainRepositoryModule
 import com.papslabs.omdb_kmp.di.sharedPreferencesModule
@@ -18,6 +20,8 @@ class BaseApplication: Application() {
             modules(
                 dataStoreModule
                         + sharedPreferencesModule
+                        + appDatabaseBuilderModule
+                        + appDatabaseModule
                         + mainRepositoryModule
                         + useCaseModule
                         + viewModelModule

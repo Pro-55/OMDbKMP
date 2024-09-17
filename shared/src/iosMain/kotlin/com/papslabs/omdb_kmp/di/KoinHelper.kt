@@ -10,6 +10,8 @@ fun init() {
         modules(
             dataStoreModule
                     + sharedPreferencesModule
+                    + appDatabaseBuilderModule
+                    + appDatabaseModule
                     + mainRepositoryModule
                     + useCaseModule
         )
