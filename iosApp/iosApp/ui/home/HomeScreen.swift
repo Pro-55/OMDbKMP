@@ -11,6 +11,6 @@ struct HomeScreen: View {
     @Binding var stack: [Route]
     
     var body: some View {
-        Text("Home!")
+        Text(verbatim: "Home!")
     }
 }

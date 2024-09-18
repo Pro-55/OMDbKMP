@@ -17,7 +17,7 @@ struct NavHost: View {
             getRoot(hasSignedUp: hasSignedUp).navigationDestination(for: Route.self) { route in
                 switch route {
                 case .Signup:
-                    SignupScreen(hasSignedUp: $hasSignedUp)
+                    SignUpScreen(hasSignedUp: $hasSignedUp)
                 case .Home:
                     HomeScreen(stack: $stack)
                 case .Search:
@@ -37,7 +37,7 @@ struct NavHost: View {
         case true:
             return AnyView(HomeScreen(stack: $stack))
         case false:
-            return AnyView(SignupScreen(hasSignedUp: $hasSignedUp))
+            return AnyView(SignUpScreen(hasSignedUp: $hasSignedUp))
         default:
             return AnyView(EmptyView())
         }
