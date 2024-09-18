@@ -19,9 +19,6 @@ android {
         buildConfig = true
         compose = true
     }
-    composeCompiler {
-        enableStrongSkippingMode = true
-    }
     signingConfigs {
         create("config") {
             storeFile = file(project.property("STORE_PATH") as String)

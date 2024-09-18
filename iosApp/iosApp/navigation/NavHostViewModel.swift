@@ -5,7 +5,6 @@
 //  Created by Pranit Rane on 31/08/24.
 //  Copyright © 2024 orgName. All rights reserved.
 //
-
 import Foundation
 import shared
 
@@ -31,7 +30,6 @@ extension NavHost {
                     },
                     onError: { error in
                         self.error = error
-                        print("TestLog: onError => \(error ?? "" )")
                     })
         }
     }

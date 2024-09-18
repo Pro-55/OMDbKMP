@@ -7,15 +7,19 @@
 //
 import SwiftUI
 
-struct SignupScreen: View {
+struct SignUpScreen: View {
+    @StateObject private var viewModel = SignUpViewModel()
     @Binding var hasSignedUp: Bool?
-
+    
     var body: some View {
-        VStack {
-            Text("Auth!")
-            Button("Sign Up") {
-                hasSignedUp = true
-            }
+        SignUpView(
+            firstName: $viewModel.firstName,
+            lastName: $viewModel.lastName,
+            email: $viewModel.email,
+            signUp: viewModel.signUp
+        )
+        .onChange(of: viewModel.hasSignUpSuccessfully) {
+            hasSignedUp = viewModel.hasSignUpSuccessfully
         }
     }
 }
