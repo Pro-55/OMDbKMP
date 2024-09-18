@@ -24,7 +24,7 @@ fun <T> Flow<Resource<T>>.asResourceFlow(): Flow<Resource<T>> =
                 is IllegalArgumentException -> println("RF => TestLog: IllegalArgumentException")
                 else -> println("RF => TestLog: Exception")
             }
-            emit(Resource.Error(msg = Constants.MSG_SOMETHING_WENT_WRONG))
+            emit(Resource.Error(msg = Constants.ERROR_MESSAGE_UNKNOWN))
         }
         .flowOn(DispatcherProvider.IO)
 
