@@ -1,9 +1,17 @@
 <resources>
     <string name="app_name">OMDb</string>
 
+    <string name="label_movies">Movies</string>
+    <string name="label_series">Series</string>
+    <string name="label_episodes">Episodes</string>
+
     <string name="hint_first_name">First Name</string>
     <string name="hint_last_name">Last Name</string>
     <string name="hint_email">Email</string>
 
     <string name="btn_save">Save</string>
+
+    <string name="cd_movies">Movies</string>
+    <string name="cd_series">Series</string>
+    <string name="cd_episodes">Episodes</string>
 </resources>
