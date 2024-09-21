@@ -19,7 +19,10 @@ struct NavHost: View {
                 case .Signup:
                     SignUpScreen(hasSignedUp: $hasSignedUp)
                 case .Home:
-                    HomeScreen(stack: $stack)
+                    HomeScreen(
+                        navigateHomeToSearchMovies: {},
+                        navigateHomeToSearchSeries: {}
+                    )
                 case .Search:
                     fatalError("Screens to be implemented")
                 case .Details:
@@ -35,7 +38,12 @@ struct NavHost: View {
     private func getRoot(hasSignedUp: Bool?) -> some View {
         switch hasSignedUp {
         case true:
-            return AnyView(HomeScreen(stack: $stack))
+            return AnyView(
+                HomeScreen(
+                    navigateHomeToSearchMovies: {},
+                    navigateHomeToSearchSeries: {}
+                )
+            )
         case false:
             return AnyView(SignUpScreen(hasSignedUp: $hasSignedUp))
         default:

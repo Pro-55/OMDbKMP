@@ -13,7 +13,7 @@ extension NavHost {
         
         // Global
         private let TAG = "NavHostViewModel"
-        private let getSignUpStatusUseCase: GetSignUpStatusUseCase  = UseCaseHelper().getSignUpStatusUseCase
+        private let getSignUpStatusUseCase: GetSignUpStatusUseCase = UseCaseHelper().getSignUpStatusUseCase
         @Published private(set) var loginStatus: Bool? = nil
         @Published private(set) var error: String? = nil
         
@@ -30,7 +30,8 @@ extension NavHost {
                     },
                     onError: { error in
                         self.error = error
-                    })
+                    }
+                )
         }
     }
 }

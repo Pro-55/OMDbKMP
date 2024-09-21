@@ -21,6 +21,9 @@
 		F34222D52C99C2D40012C8FB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34222D42C99C2D40012C8FB /* SignUpView.swift */; };
 		F34222D72C99CE340012C8FB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F34222D62C99CE340012C8FB /* Localizable.xcstrings */; };
 		F34222D92C99DAD60012C8FB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34222D82C99DAD60012C8FB /* StringExtensions.swift */; };
+		F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F132C9B3E0000A68AF2 /* HomeView.swift */; };
+		F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */; };
+		F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */; };
 		F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */; };
 		F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,9 @@
 		F34222D42C99C2D40012C8FB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F34222D62C99CE340012C8FB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F34222D82C99DAD60012C8FB /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F34A1F132C9B3E0000A68AF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTypeCard.swift; sourceTree = "<group>"; };
 		F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				15D0EB002ACB541B00800946 /* HomeScreen.swift */,
+				F34A1F132C9B3E0000A68AF2 /* HomeView.swift */,
+				F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */,
+				F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -163,8 +172,8 @@
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
-				F34222D62C99CE340012C8FB /* Localizable.xcstrings */,
 				7555FF7D242A565900829871 /* iosApp */,
+				F34222D62C99CE340012C8FB /* Localizable.xcstrings */,
 				7555FF7C242A565900829871 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -340,8 +349,11 @@
 				15D0EB042ACB544200800946 /* SignUpScreen.swift in Sources */,
 				F34222D92C99DAD60012C8FB /* StringExtensions.swift in Sources */,
 				F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */,
+				F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */,
 				15D0EB012ACB541B00800946 /* HomeScreen.swift in Sources */,
+				F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */,
 				F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */,
+				F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */,
 				15D0EAF52ACB532D00800946 /* iOSApp.swift in Sources */,
 				15D0EAF92ACB539B00800946 /* NavHost.swift in Sources */,
 				F34222D52C99C2D40012C8FB /* SignUpView.swift in Sources */,

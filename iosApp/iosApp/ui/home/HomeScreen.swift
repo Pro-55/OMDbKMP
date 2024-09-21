@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @Binding var stack: [Route]
+    @StateObject private var viewModel = HomeViewModel()
+    let navigateHomeToSearchMovies: () -> Void
+    let navigateHomeToSearchSeries: () -> Void
     
     var body: some View {
-        Text(verbatim: "Home!")
+        HomeView(
+            greeting: viewModel.greeting,
+            navigateHomeToSearchMovies: navigateHomeToSearchMovies,
+            navigateHomeToSearchSeries: navigateHomeToSearchSeries
+        )
     }
 }
