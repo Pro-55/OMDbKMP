@@ -46,6 +46,8 @@ kotlin {
 
                 implementation(libs.room.runtime)
                 implementation(libs.sqlite.bundled)
+
+                implementation(libs.kotlinx.datetime)
             }
         }
         val commonTest by getting {
