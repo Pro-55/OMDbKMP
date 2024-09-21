@@ -12,7 +12,7 @@ struct SignUpView: View {
     @Binding var firstName: String
     @Binding var lastName: String
     @Binding var email: String
-    var signUp: () -> Void
+    let signUp: () -> Void
     
     var body: some View {
         Form {

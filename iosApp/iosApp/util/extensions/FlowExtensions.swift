@@ -15,18 +15,22 @@ extension Kotlinx_coroutines_coreFlow {
         onError: @escaping (String?) -> Void
     ) {
         FlowExtensionsKt.asNativeFlow(self)
-            .callbacks(onLoading: {
-                DispatchQueue.main.async {
-                    onLoading()
+            .callbacks(
+                onLoading: {
+                    DispatchQueue.main.async {
+                        onLoading()
+                    }
+                },
+                onSuccess: { data in
+                    DispatchQueue.main.async {
+                        onSuccess(data)
+                    }
+                },
+                onError: { msg in
+                    DispatchQueue.main.async {
+                        onError(msg)
+                    }
                 }
-            }, onSuccess: { data in
-                DispatchQueue.main.async {
-                    onSuccess(data)
-                }
-            }, onError: { msg in
-                DispatchQueue.main.async {
-                    onError(msg)
-                }
-            })
+            )
     }
 }

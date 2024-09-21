@@ -10,8 +10,6 @@ import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.papslabs.omdb_kmp.domain.shared_preferences.SharedPreferences
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.last
-import kotlinx.coroutines.flow.map
 
 class SharedPreferencesImpl(
     private val dataStore: DataStore<Preferences>
@@ -37,8 +35,8 @@ class SharedPreferencesImpl(
     ): String? {
         val stringPreferencesKey = stringPreferencesKey(key)
         return dataStore.data
-            .map { it[stringPreferencesKey] ?: defaultValue }
-            .last()
+            .first()[stringPreferencesKey]
+                ?: defaultValue
     }
 
     override suspend fun putInt(
@@ -61,8 +59,8 @@ class SharedPreferencesImpl(
     ): Int? {
         val intPreferencesKey = intPreferencesKey(key)
         return dataStore.data
-            .map { it[intPreferencesKey] ?: defaultValue }
-            .last()
+            .first()[intPreferencesKey]
+                ?: defaultValue
     }
 
     override suspend fun putLong(
@@ -85,8 +83,8 @@ class SharedPreferencesImpl(
     ): Long? {
         val longPreferencesKey = longPreferencesKey(key)
         return dataStore.data
-            .map { it[longPreferencesKey] ?: defaultValue }
-            .last()
+            .first()[longPreferencesKey]
+                ?: defaultValue
     }
 
     override suspend fun putFloat(
@@ -109,8 +107,8 @@ class SharedPreferencesImpl(
     ): Float? {
         val floatPreferencesKey = floatPreferencesKey(key)
         return dataStore.data
-            .map { it[floatPreferencesKey] ?: defaultValue }
-            .last()
+            .first()[floatPreferencesKey]
+                ?: defaultValue
     }
 
     override suspend fun putBoolean(
@@ -132,7 +130,9 @@ class SharedPreferencesImpl(
         defaultValue: Boolean?
     ): Boolean? {
         val booleanPreferencesKey = booleanPreferencesKey(key)
-        return dataStore.data.first()[booleanPreferencesKey] ?: defaultValue
+        return dataStore.data
+            .first()[booleanPreferencesKey]
+                ?: defaultValue
     }
 
     override suspend fun clear() {

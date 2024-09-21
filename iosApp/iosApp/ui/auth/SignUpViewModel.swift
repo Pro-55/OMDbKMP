@@ -13,7 +13,7 @@ extension SignUpScreen {
         
         // Global
         private let TAG = "SignUpViewModel"
-        private let signUpUseCase: SignUpUseCase  = UseCaseHelper().signUpUseCase
+        private let signUpUseCase: SignUpUseCase = UseCaseHelper().signUpUseCase
         @Published private(set) var isLoading = false
         @Published private(set) var hasSignUpSuccessfully = false
         @Published private(set) var error: String? = nil
@@ -42,7 +42,8 @@ extension SignUpScreen {
                 onError: { error in
                     self.error = error
                     self.isLoading = false
-                })
+                }
+            )
         }
         
         private func isInvalid() -> Bool {
