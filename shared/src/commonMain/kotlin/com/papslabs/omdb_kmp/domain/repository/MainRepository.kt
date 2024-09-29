@@ -1,6 +1,8 @@
 package com.papslabs.omdb_kmp.domain.repository
 
 import com.papslabs.omdb_kmp.domain.model.Resource
+import com.papslabs.omdb_kmp.domain.model.SearchResult
+import com.papslabs.omdb_kmp.domain.model.Type
 import com.papslabs.omdb_kmp.domain.model.User
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDateTime
@@ -21,4 +23,10 @@ interface MainRepository {
         userName: String?,
         dateTime: LocalDateTime
     ): String
+
+    fun searchContent(
+        query: String,
+        page: Int,
+        type: Type
+    ): Flow<Resource<SearchResult>>
 }
