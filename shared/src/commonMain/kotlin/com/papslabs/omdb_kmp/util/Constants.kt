@@ -24,4 +24,5 @@ object Constants {
     const val ERROR_MESSAGE_REQUEST_TIMEOUT_EXCEPTION =
         "Request took a long time! Please check your connection... $EMOJI_TURTLE"
     const val ERROR_MESSAGE_UNKNOWN = "Something went wrong... $EMOJI_EXPLODING_HEAD"
+    const val NOT_AVAILABLE = "N/A"
 }
