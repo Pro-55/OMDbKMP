@@ -54,6 +54,8 @@
 		15D0EB032ACB544200800946 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3371EF12CA9A3F600BB8C46 /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		F3371EF22CA9A40700BB8C46 /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
 		F34222D42C99C2D40012C8FB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F34222D62C99CE340012C8FB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F34222D82C99DAD60012C8FB /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -89,8 +91,8 @@
 		1532C7E92ACC595800B1A3BC /* firebase */ = {
 			isa = PBXGroup;
 			children = (
-				15BF08F62ACC88FE0050F8CE /* release */,
 				157600372ACC740B00B17CDB /* debug */,
+				15BF08F62ACC88FE0050F8CE /* release */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -133,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				15D0EAF82ACB539B00800946 /* NavHost.swift */,
-				15D0EAFA2ACB53AF00800946 /* Route.swift */,
 				F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */,
+				15D0EAFA2ACB53AF00800946 /* Route.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -151,10 +153,10 @@
 		15D0EAFF2ACB541000800946 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */,
 				15D0EB002ACB541B00800946 /* HomeScreen.swift */,
 				F34A1F132C9B3E0000A68AF2 /* HomeView.swift */,
 				F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */,
-				F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -163,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				15D0EB032ACB544200800946 /* SignUpScreen.swift */,
-				F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */,
 				F34222D42C99C2D40012C8FB /* SignUpView.swift */,
+				F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -172,6 +174,7 @@
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
+				F3371EF02CA9A3CE00BB8C46 /* config */,
 				7555FF7D242A565900829871 /* iosApp */,
 				F34222D62C99CE340012C8FB /* Localizable.xcstrings */,
 				7555FF7C242A565900829871 /* Products */,
@@ -189,15 +192,24 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				7555FF8C242A565B00829871 /* Info.plist */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				1532C7E92ACC595800B1A3BC /* firebase */,
-				7555FF8C242A565B00829871 /* Info.plist */,
 				15D0EAF72ACB538900800946 /* navigation */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				15D0EAF22ACB530100800946 /* ui */,
 				15D0EAF62ACB538200800946 /* util */,
 			);
 			path = iosApp;
+			sourceTree = "<group>";
+		};
+		F3371EF02CA9A3CE00BB8C46 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F3371EF12CA9A3F600BB8C46 /* DebugConfig.xcconfig */,
+				F3371EF22CA9A40700BB8C46 /* ReleaseConfig.xcconfig */,
+			);
+			path = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +378,7 @@
 /* Begin XCBuildConfiguration section */
 		7555FFA3242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3371EF12CA9A3F600BB8C46 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -428,6 +441,7 @@
 		};
 		7555FFA4242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3371EF22CA9A40700BB8C46 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -484,6 +498,7 @@
 		};
 		7555FFA6242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3371EF12CA9A3F600BB8C46 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -518,6 +533,7 @@
 		};
 		7555FFA7242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3371EF22CA9A40700BB8C46 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

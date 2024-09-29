@@ -105,6 +105,37 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField(
+                "String",
+                "BaseUrl",
+                project.property("DEV_URL") as String
+            )
+            buildConfigField(
+                "String",
+                "ApiKey",
+                project.property("OMDB_API_KEY") as String
+            )
+        }
+        release {
+            buildConfigField(
+                "String",
+                "BaseUrl",
+                project.property("PROD_URL") as String
+            )
+            buildConfigField(
+                "String",
+                "ApiKey",
+                project.property("OMDB_API_KEY") as String
+            )
+        }
+    }
 }
 
 room {
