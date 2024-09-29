@@ -17,3 +17,4 @@ xcuserdata/
 *.dSYM
 Pods
 GoogleService-Info.plist
+*.xcconfig

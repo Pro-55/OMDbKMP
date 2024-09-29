@@ -12,6 +12,17 @@
         }
       }
     },
+    "cd_cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
     "cd_movies" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -23,6 +34,28 @@
         }
       }
     },
+    "cd_poster" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poster"
+          }
+        }
+      }
+    },
+    "cd_search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
     "cd_series" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -30,6 +63,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Series"
+          }
+        }
+      }
+    },
+    "divider_bullet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
           }
         }
       }
@@ -63,6 +107,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last Name"
+          }
+        }
+      }
+    },
+    "hint_search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
           }
         }
       }

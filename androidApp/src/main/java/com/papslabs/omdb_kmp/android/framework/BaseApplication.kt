@@ -5,7 +5,9 @@ import com.papslabs.omdb_kmp.android.di.viewModelModule
 import com.papslabs.omdb_kmp.di.appDatabaseBuilderModule
 import com.papslabs.omdb_kmp.di.appDatabaseModule
 import com.papslabs.omdb_kmp.di.dataStoreModule
+import com.papslabs.omdb_kmp.di.httpClientModule
 import com.papslabs.omdb_kmp.di.mainRepositoryModule
+import com.papslabs.omdb_kmp.di.oMDbKMPApiModule
 import com.papslabs.omdb_kmp.di.sharedPreferencesModule
 import com.papslabs.omdb_kmp.di.useCaseModule
 import org.koin.android.ext.koin.androidContext
@@ -22,6 +24,8 @@ class BaseApplication: Application() {
                         + sharedPreferencesModule
                         + appDatabaseBuilderModule
                         + appDatabaseModule
+                        + httpClientModule
+                        + oMDbKMPApiModule
                         + mainRepositoryModule
                         + useCaseModule
                         + viewModelModule

@@ -3,6 +3,7 @@ package com.papslabs.omdb_kmp.di
 import com.papslabs.omdb_kmp.domain.use_case.GetCurrentUserUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetGreetingUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetSignUpStatusUseCase
+import com.papslabs.omdb_kmp.domain.use_case.SearchContentUseCase
 import com.papslabs.omdb_kmp.domain.use_case.SignUpUseCase
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -15,6 +16,8 @@ fun init() {
                     + sharedPreferencesModule
                     + appDatabaseBuilderModule
                     + appDatabaseModule
+                    + httpClientModule
+                    + oMDbKMPApiModule
                     + mainRepositoryModule
                     + useCaseModule
         )
@@ -37,4 +40,8 @@ class UseCaseHelper: KoinComponent {
     private val _getGreetingUseCase: GetGreetingUseCase by inject()
     val getGreetingUseCase: GetGreetingUseCase
         get() = _getGreetingUseCase
+
+    private val _searchContentUseCase: SearchContentUseCase by inject()
+    val searchContentUseCase: SearchContentUseCase
+        get() = _searchContentUseCase
 }

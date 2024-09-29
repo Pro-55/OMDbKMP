@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.room)
 }
@@ -48,6 +49,13 @@ kotlin {
                 implementation(libs.sqlite.bundled)
 
                 implementation(libs.kotlinx.datetime)
+
+                implementation(libs.kotlinx.serialization)
+
+                implementation(libs.ktor.core)
+                implementation(libs.ktor.content.negotiation)
+                implementation(libs.ktor.serialization)
+                implementation(libs.ktor.logging)
             }
         }
         val commonTest by getting {
@@ -62,6 +70,8 @@ kotlin {
                 implementation(libs.koin.android)
 
                 implementation(libs.room.runtime.android)
+
+                implementation(libs.ktor.okhttp)
             }
         }
         val androidUnitTest by getting
@@ -70,6 +80,9 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependsOn(commonMain)
+            dependencies {
+                implementation(libs.ktor.darwin)
+            }
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
@@ -91,6 +104,37 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField(
+                "String",
+                "BaseUrl",
+                project.property("DEV_URL") as String
+            )
+            buildConfigField(
+                "String",
+                "ApiKey",
+                project.property("OMDB_API_KEY") as String
+            )
+        }
+        release {
+            buildConfigField(
+                "String",
+                "BaseUrl",
+                project.property("PROD_URL") as String
+            )
+            buildConfigField(
+                "String",
+                "ApiKey",
+                project.property("OMDB_API_KEY") as String
+            )
+        }
     }
 }
 

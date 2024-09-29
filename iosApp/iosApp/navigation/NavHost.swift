@@ -6,11 +6,13 @@
 //  Copyright © 2023 orgName. All rights reserved.
 //
 import SwiftUI
+import shared
 
 struct NavHost: View {
     @StateObject private var viewModel = NavHostViewModel()
     @State private var stack: [Route] = []
     @State private var hasSignedUp: Bool?
+    @State private var isOverlayVisibile: Bool = false
     
     var body: some View {
         NavigationStack(path: $stack) {
@@ -20,11 +22,21 @@ struct NavHost: View {
                     SignUpScreen(hasSignedUp: $hasSignedUp)
                 case .Home:
                     HomeScreen(
-                        navigateHomeToSearchMovies: {},
-                        navigateHomeToSearchSeries: {}
+                        navigateHomeToSearchMovies: {
+                            stack.append(.Search(type: Type.movie))
+                        },
+                        navigateHomeToSearchSeries: {
+                            stack.append(.Search(type: Type.series))
+                        }
                     )
-                case .Search:
-                    fatalError("Screens to be implemented")
+                case .Search(let type):
+                    SearchScreen(
+                        type: type,
+                        isOverlayVisibile: $isOverlayVisibile,
+                        navigateSearchToDetails: { content in
+                        }
+                    )
+                    .navigationBarHidden(isOverlayVisibile)
                 case .Details:
                     fatalError("Screens to be implemented")
                 }
@@ -40,8 +52,12 @@ struct NavHost: View {
         case true:
             return AnyView(
                 HomeScreen(
-                    navigateHomeToSearchMovies: {},
-                    navigateHomeToSearchSeries: {}
+                    navigateHomeToSearchMovies: {
+                        stack.append(.Search(type: Type.movie))
+                    },
+                    navigateHomeToSearchSeries: {
+                        stack.append(.Search(type: Type.series))
+                    }
                 )
             )
         case false:

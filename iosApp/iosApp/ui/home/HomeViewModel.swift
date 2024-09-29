@@ -14,8 +14,8 @@ extension HomeScreen {
         
         // Global
         private let TAG = "HomeViewModel"
-        private let getCurrentUserUseCase: GetCurrentUserUseCase  = UseCaseHelper().getCurrentUserUseCase
-        private let getGreetingUseCase: GetGreetingUseCase  = UseCaseHelper().getGreetingUseCase
+        private let getCurrentUserUseCase: GetCurrentUserUseCase = UseCaseHelper().getCurrentUserUseCase
+        private let getGreetingUseCase: GetGreetingUseCase = UseCaseHelper().getGreetingUseCase
         private var user: User? = nil
         @Published var greeting = ""
         
