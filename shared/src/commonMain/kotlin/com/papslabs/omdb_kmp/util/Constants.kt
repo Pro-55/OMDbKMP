@@ -7,6 +7,8 @@ object Constants {
     const val KEY_SIGN_UP_STATUS = "sign_up_status"
     const val KEY_USER_ID = "user_id"
 
+    const val PAGE_SIZE = 10
+
     private const val EMOJI_MONOCLE_FACE = "\uD83E\uDDD0"
     private const val EMOJI_TURTLE = "\uD83D\uDC22"
     private const val EMOJI_EXPLODING_HEAD = "\uD83E\uDD2F"
