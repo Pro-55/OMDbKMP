@@ -38,7 +38,7 @@ struct ContentTypeCard: View {
             .foregroundColor(.white)
             .background(.gray)
             .cornerRadius(8)
-            .shadow(color: .gray, radius: 5, x: 0, y: 5)
+            .shadow(radius: 8)
         }
     }
 }

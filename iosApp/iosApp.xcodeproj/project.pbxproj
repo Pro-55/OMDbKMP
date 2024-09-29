@@ -24,10 +24,19 @@
 		F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F132C9B3E0000A68AF2 /* HomeView.swift */; };
 		F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */; };
 		F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */; };
+		F35CDD692C9F59BE00AB6E35 /* EmptyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CDD682C9F59BE00AB6E35 /* EmptyContentView.swift */; };
+		F35CDD6F2C9F613800AB6E35 /* ContentGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CDD6E2C9F613800AB6E35 /* ContentGrid.swift */; };
+		F35CDD722C9F62EA00AB6E35 /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CDD712C9F62EA00AB6E35 /* PosterView.swift */; };
 		F35CDD742C9F66B600AB6E35 /* Glide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CDD732C9F66B600AB6E35 /* Glide.swift */; };
+		F3608ED12CA5A9EF00B4A7C5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED02CA5A9EF00B4A7C5 /* SearchBar.swift */; };
 		F3608ED32CA5D94F00B4A7C5 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED22CA5D94F00B4A7C5 /* ViewExtensions.swift */; };
 		F3608ED52CA5D99200B4A7C5 /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */; };
 		F3608ED72CA5DEF800B4A7C5 /* HoldGestureDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */; };
+		F36598F82CA8853000FC7874 /* ProImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36598F72CA8853000FC7874 /* ProImage.swift */; };
+		F37C0EE42CA6EEC90025D6D5 /* PeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C0EE32CA6EEC90025D6D5 /* PeekView.swift */; };
+		F38952122C9EE9E100A6C62B /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38952112C9EE9E100A6C62B /* SearchScreen.swift */; };
+		F38952142C9EEA0700A6C62B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38952132C9EEA0700A6C62B /* SearchView.swift */; };
+		F38952162C9EEA1A00A6C62B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38952152C9EEA1A00A6C62B /* SearchViewModel.swift */; };
 		F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */; };
 		F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -66,10 +75,19 @@
 		F34A1F132C9B3E0000A68AF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTypeCard.swift; sourceTree = "<group>"; };
+		F35CDD682C9F59BE00AB6E35 /* EmptyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyContentView.swift; sourceTree = "<group>"; };
+		F35CDD6E2C9F613800AB6E35 /* ContentGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentGrid.swift; sourceTree = "<group>"; };
+		F35CDD712C9F62EA00AB6E35 /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		F35CDD732C9F66B600AB6E35 /* Glide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glide.swift; sourceTree = "<group>"; };
+		F3608ED02CA5A9EF00B4A7C5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F3608ED22CA5D94F00B4A7C5 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 		F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldGestureDetector.swift; sourceTree = "<group>"; };
+		F36598F72CA8853000FC7874 /* ProImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProImage.swift; sourceTree = "<group>"; };
+		F37C0EE32CA6EEC90025D6D5 /* PeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekView.swift; sourceTree = "<group>"; };
+		F38952112C9EE9E100A6C62B /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		F38952132C9EEA0700A6C62B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F38952152C9EEA1A00A6C62B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +145,7 @@
 				15D0EB022ACB542500800946 /* auth */,
 				15D0EAFF2ACB541000800946 /* home */,
 				15D0EAF42ACB532D00800946 /* iOSApp.swift */,
+				F38952102C9EE9C400A6C62B /* search */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -227,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				F35CDD732C9F66B600AB6E35 /* Glide.swift */,
+				F35CDD712C9F62EA00AB6E35 /* PosterView.swift */,
+				F36598F72CA8853000FC7874 /* ProImage.swift */,
 				F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */,
 			);
 			path = views;
@@ -238,6 +259,20 @@
 				F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */,
 			);
 			path = gesture_detectors;
+			sourceTree = "<group>";
+		};
+		F38952102C9EE9C400A6C62B /* search */ = {
+			isa = PBXGroup;
+			children = (
+				F35CDD6E2C9F613800AB6E35 /* ContentGrid.swift */,
+				F35CDD682C9F59BE00AB6E35 /* EmptyContentView.swift */,
+				F37C0EE32CA6EEC90025D6D5 /* PeekView.swift */,
+				F3608ED02CA5A9EF00B4A7C5 /* SearchBar.swift */,
+				F38952112C9EE9E100A6C62B /* SearchScreen.swift */,
+				F38952132C9EEA0700A6C62B /* SearchView.swift */,
+				F38952152C9EEA1A00A6C62B /* SearchViewModel.swift */,
+			);
+			path = search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,8 +422,11 @@
 			files = (
 				F3608ED32CA5D94F00B4A7C5 /* ViewExtensions.swift in Sources */,
 				15D0EAFB2ACB53AF00800946 /* Route.swift in Sources */,
+				F35CDD6F2C9F613800AB6E35 /* ContentGrid.swift in Sources */,
 				15D0EB042ACB544200800946 /* SignUpScreen.swift in Sources */,
+				F38952162C9EEA1A00A6C62B /* SearchViewModel.swift in Sources */,
 				F34222D92C99DAD60012C8FB /* StringExtensions.swift in Sources */,
+				F38952122C9EE9E100A6C62B /* SearchScreen.swift in Sources */,
 				F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */,
 				F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */,
 				F3608ED52CA5D99200B4A7C5 /* SizeCalculator.swift in Sources */,
@@ -396,12 +434,18 @@
 				F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */,
 				F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */,
 				F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */,
+				F38952142C9EEA0700A6C62B /* SearchView.swift in Sources */,
 				15D0EAF52ACB532D00800946 /* iOSApp.swift in Sources */,
+				F3608ED12CA5A9EF00B4A7C5 /* SearchBar.swift in Sources */,
 				15D0EAF92ACB539B00800946 /* NavHost.swift in Sources */,
 				F35CDD742C9F66B600AB6E35 /* Glide.swift in Sources */,
+				F36598F82CA8853000FC7874 /* ProImage.swift in Sources */,
 				F34222D52C99C2D40012C8FB /* SignUpView.swift in Sources */,
 				F3608ED72CA5DEF800B4A7C5 /* HoldGestureDetector.swift in Sources */,
 				15D0EAFE2ACB53E500800946 /* FlowExtensions.swift in Sources */,
+				F35CDD692C9F59BE00AB6E35 /* EmptyContentView.swift in Sources */,
+				F37C0EE42CA6EEC90025D6D5 /* PeekView.swift in Sources */,
+				F35CDD722C9F62EA00AB6E35 /* PosterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,11 @@
 //  Copyright © 2023 orgName. All rights reserved.
 //
 import Foundation
+import shared
 
-enum Route {
+enum Route: Hashable {
     case Signup
     case Home
-    case Search
+    case Search(type: Type)
     case Details
 }
