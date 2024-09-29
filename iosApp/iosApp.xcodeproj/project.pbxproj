@@ -24,6 +24,10 @@
 		F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F132C9B3E0000A68AF2 /* HomeView.swift */; };
 		F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */; };
 		F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */; };
+		F35CDD742C9F66B600AB6E35 /* Glide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CDD732C9F66B600AB6E35 /* Glide.swift */; };
+		F3608ED32CA5D94F00B4A7C5 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED22CA5D94F00B4A7C5 /* ViewExtensions.swift */; };
+		F3608ED52CA5D99200B4A7C5 /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */; };
+		F3608ED72CA5DEF800B4A7C5 /* HoldGestureDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */; };
 		F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */; };
 		F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,10 @@
 		F34A1F132C9B3E0000A68AF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F34A1F152C9B3E1900A68AF2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F34A1F172C9B447B00A68AF2 /* ContentTypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTypeCard.swift; sourceTree = "<group>"; };
+		F35CDD732C9F66B600AB6E35 /* Glide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glide.swift; sourceTree = "<group>"; };
+		F3608ED22CA5D94F00B4A7C5 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldGestureDetector.swift; sourceTree = "<group>"; };
 		F3B2FE922C84BEF300FAAB41 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F3B6EBA72C8340A300A0C77B /* NavHostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				15D0EAFC2ACB53CB00800946 /* extensions */,
+				F37C0EE22CA6EE560025D6D5 /* gesture_detectors */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 			children = (
 				15D0EAFD2ACB53E500800946 /* FlowExtensions.swift */,
 				F34222D82C99DAD60012C8FB /* StringExtensions.swift */,
+				F3608ED22CA5D94F00B4A7C5 /* ViewExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -199,6 +209,7 @@
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				15D0EAF22ACB530100800946 /* ui */,
 				15D0EAF62ACB538200800946 /* util */,
+				F35CDD702C9F62DC00AB6E35 /* views */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -210,6 +221,23 @@
 				F3371EF22CA9A40700BB8C46 /* ReleaseConfig.xcconfig */,
 			);
 			path = config;
+			sourceTree = "<group>";
+		};
+		F35CDD702C9F62DC00AB6E35 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F35CDD732C9F66B600AB6E35 /* Glide.swift */,
+				F3608ED42CA5D99200B4A7C5 /* SizeCalculator.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F37C0EE22CA6EE560025D6D5 /* gesture_detectors */ = {
+			isa = PBXGroup;
+			children = (
+				F3608ED62CA5DEF800B4A7C5 /* HoldGestureDetector.swift */,
+			);
+			path = gesture_detectors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,18 +385,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3608ED32CA5D94F00B4A7C5 /* ViewExtensions.swift in Sources */,
 				15D0EAFB2ACB53AF00800946 /* Route.swift in Sources */,
 				15D0EB042ACB544200800946 /* SignUpScreen.swift in Sources */,
 				F34222D92C99DAD60012C8FB /* StringExtensions.swift in Sources */,
 				F3B2FE932C84BEF300FAAB41 /* SignUpViewModel.swift in Sources */,
 				F34A1F182C9B447B00A68AF2 /* ContentTypeCard.swift in Sources */,
+				F3608ED52CA5D99200B4A7C5 /* SizeCalculator.swift in Sources */,
 				15D0EB012ACB541B00800946 /* HomeScreen.swift in Sources */,
 				F34A1F142C9B3E0000A68AF2 /* HomeView.swift in Sources */,
 				F3B6EBA82C8340A300A0C77B /* NavHostViewModel.swift in Sources */,
 				F34A1F162C9B3E1900A68AF2 /* HomeViewModel.swift in Sources */,
 				15D0EAF52ACB532D00800946 /* iOSApp.swift in Sources */,
 				15D0EAF92ACB539B00800946 /* NavHost.swift in Sources */,
+				F35CDD742C9F66B600AB6E35 /* Glide.swift in Sources */,
 				F34222D52C99C2D40012C8FB /* SignUpView.swift in Sources */,
+				F3608ED72CA5DEF800B4A7C5 /* HoldGestureDetector.swift in Sources */,
 				15D0EAFE2ACB53E500800946 /* FlowExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
