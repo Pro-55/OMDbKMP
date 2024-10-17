@@ -2,8 +2,9 @@ package com.papslabs.omdb_kmp.util.extensions
 
 import com.papslabs.omdb_kmp.domain.model.Resource
 import com.papslabs.omdb_kmp.util.Constants
-import com.papslabs.omdb_kmp.util.DispatcherProvider
 import com.papslabs.omdb_kmp.util.wrappers.NativeFlow
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -26,7 +27,7 @@ fun <T> Flow<Resource<T>>.asResourceFlow(): Flow<Resource<T>> =
             }
             emit(Resource.Error(msg = Constants.ERROR_MESSAGE_UNKNOWN))
         }
-        .flowOn(DispatcherProvider.IO)
+        .flowOn(Dispatchers.IO)
 
 /**
  * converts resource flow into native flow
