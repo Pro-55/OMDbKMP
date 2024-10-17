@@ -22,10 +22,9 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @OptIn(FlowPreview::class)
-class SearchViewModel @Inject constructor(
+class SearchViewModel(
     savedStateHandle: SavedStateHandle,
     private val searchContentUseCase: SearchContentUseCase
 ): ViewModel() {
@@ -102,7 +101,7 @@ class SearchViewModel @Inject constructor(
         query: String
     ) {
         if (shouldClearResults && lastSearchedQuery != query) {
-            resetSearchResult()
+            resetSearchResult(query = _queryFlow.value)
         }
 
         val size = state.result
@@ -144,7 +143,7 @@ class SearchViewModel @Inject constructor(
     }
 
     private fun resetSearchResult(
-        query: String = _queryFlow.value
+        query: String
     ) {
         lastSearchedQuery = ""
         lastSearchedPage = 0

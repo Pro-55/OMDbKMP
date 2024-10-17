@@ -76,11 +76,11 @@ private val DarkColors = darkColorScheme(
 @Composable
 fun OMDbKmpTheme(
     useDarkTheme: Boolean = isSystemInDarkTheme(),
-    isDynamicColor: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S,
+    shouldUseDynamicColors: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colors = when {
-        isDynamicColor -> {
+        shouldUseDynamicColors && areDynamicColorsSupported() -> {
             val current = LocalContext.current
             if (useDarkTheme) dynamicDarkColorScheme(current) else dynamicLightColorScheme(current)
         }
@@ -101,3 +101,6 @@ fun OMDbKmpTheme(
         content = content
     )
 }
+
+@Composable
+fun areDynamicColorsSupported(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S

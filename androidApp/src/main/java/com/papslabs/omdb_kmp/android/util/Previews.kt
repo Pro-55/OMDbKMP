@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_YES,
-    device = Devices.PHONE,
+    device = Devices.PIXEL_7_PRO,
     name = "Phone [Dark]"
 )
 annotation class PhoneDarkPreview
@@ -16,7 +16,7 @@ annotation class PhoneDarkPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_YES,
-    device = Devices.FOLDABLE,
+    device = Devices.PIXEL_FOLD,
     name = "Foldable [Dark]"
 )
 annotation class FoldableDarkPreview
@@ -24,7 +24,7 @@ annotation class FoldableDarkPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_YES,
-    device = Devices.TABLET,
+    device = Devices.PIXEL_TABLET,
     name = "Tablet [Dark]"
 )
 annotation class TabletDarkPreview
@@ -32,7 +32,7 @@ annotation class TabletDarkPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_YES,
-    device = Devices.DESKTOP,
+    device = Devices.TV_1080p,
     name = "Desktop [Dark]"
 )
 annotation class DesktopDarkPreview
@@ -46,7 +46,7 @@ annotation class UltraDarkPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_NO,
-    device = Devices.PHONE,
+    device = Devices.PIXEL_7_PRO,
     name = "Phone [Light]"
 )
 annotation class PhoneLightPreview
@@ -54,7 +54,7 @@ annotation class PhoneLightPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_NO,
-    device = Devices.FOLDABLE,
+    device = Devices.PIXEL_FOLD,
     name = "Foldable [Light]"
 )
 annotation class FoldableLightPreview
@@ -62,7 +62,7 @@ annotation class FoldableLightPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_NO,
-    device = Devices.TABLET,
+    device = Devices.PIXEL_TABLET,
     name = "Tablet [Light]"
 )
 annotation class TabletLightPreview
@@ -70,7 +70,7 @@ annotation class TabletLightPreview
 @Preview(
     showBackground = true,
     uiMode = UI_MODE_NIGHT_NO,
-    device = Devices.DESKTOP,
+    device = Devices.TV_1080p,
     name = "Desktop [Light]"
 )
 annotation class DesktopLightPreview
