@@ -97,4 +97,4 @@ fun getVersionName(): String {
     return "$major.$minor.$hotfix"
 }
 
-fun getJavaVersion(): JavaVersion = JavaVersion.VERSION_17
+fun getJavaVersion(): JavaVersion = JavaVersion.VERSION_21
