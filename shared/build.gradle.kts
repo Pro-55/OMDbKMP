@@ -146,4 +146,4 @@ dependencies {
     ksp(libs.room.compiler)
 }
 
-fun getJvmTarget(): JvmTarget = JvmTarget.JVM_17
+fun getJvmTarget(): JvmTarget = JvmTarget.JVM_21
