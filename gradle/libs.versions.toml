@@ -1,8 +1,8 @@
 [versions]
 ## SDK Versions
-compileSdk = "34"
+compileSdk = "35"
 minSdk = "23"
-targetSdk = "34"
+targetSdk = "35"
 
 ## App Versions
 major = "1"
@@ -10,27 +10,27 @@ minor = "0"
 hotfix = "0"
 
 ## Gradle
-androidGradlePlugin = "8.7.1"
+androidGradlePlugin = "8.7.2"
 firebaseCrashlyticsGradlePlugin = "3.0.2"
 googleServicesGradlePlugin = "4.4.2"
-kotlin = "2.0.20"
-ksp = "2.0.20-1.0.25"
+kotlin = "2.0.21"
+ksp = "2.0.21-1.0.27"
 
 # Dependencies
 androidXActivity = "1.9.3"
-androidXCore = "1.13.1"
+androidXCore = "1.15.0"
 androidXNavigation = "2.8.3"
-composeBom = "2024.10.00"
-coil = "2.7.0"
+composeBom = "2024.10.01"
+coil = "3.0.2"
 datastore = "1.1.1"
-firebaseBom = "33.4.0"
+firebaseBom = "33.5.1"
 koin = "4.0.0"
 kotlinx = "1.9.0"
 kotlinXDatetime = "0.6.1"
 kotlinXSerialization = "1.7.3"
-ktor = "2.3.12"
-room = "2.7.0-alpha10"
-sqlite = "2.5.0-alpha10"
+ktor = "3.0.1"
+room = "2.7.0-alpha11"
+sqlite = "2.5.0-alpha11"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidXActivity" }
@@ -44,7 +44,8 @@ compose-ui = { module = "androidx.compose.ui:ui" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 
-coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil" }
 
 datastore-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
 
