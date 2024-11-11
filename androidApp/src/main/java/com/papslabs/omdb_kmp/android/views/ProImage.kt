@@ -11,8 +11,8 @@ import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
-import coil.compose.AsyncImage
-import coil.compose.AsyncImagePainter
+import coil3.compose.AsyncImage
+import coil3.compose.AsyncImagePainter
 
 @Composable
 fun ProImage(
