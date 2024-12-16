@@ -79,7 +79,7 @@ fun HomeView(
 
 @PhoneLightPreview
 @Composable
-fun HomeViewPreview() {
+private fun HomeViewPreview() {
     OMDbKmpTheme {
         val snackbarHostState = remember { SnackbarHostState() }
         HomeView(

@@ -89,7 +89,7 @@ fun SignUpView(
 
 @PhoneLightPreview
 @Composable
-fun SignUpViewPreview() {
+private fun SignUpViewPreview() {
     OMDbKmpTheme {
         val snackbarHostState = remember { SnackbarHostState() }
         SignUpView(
