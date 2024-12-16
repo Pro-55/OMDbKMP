@@ -109,7 +109,7 @@ fun SearchView(
 
 @PhoneLightPreview
 @Composable
-fun SearchViewPreview() {
+private fun SearchViewPreview() {
     OMDbKmpTheme {
         SearchView(
             isLoading = false,
