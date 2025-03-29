@@ -11,7 +11,7 @@ import shared
 struct SearchScreen: View {
     @StateObject private var viewModel = SearchViewModel()
     let type: Type
-    @Binding var isOverlayVisibile: Bool
+    @Binding var isOverlayVisible: Bool
     let navigateSearchToDetails: (ShortContent) -> Void
     
     var body: some View {
@@ -28,7 +28,7 @@ struct SearchScreen: View {
             onContentClicked: navigateSearchToDetails
         )
         .onChange(of: viewModel.shouldPeek) {
-            isOverlayVisibile = viewModel.shouldPeek
+            isOverlayVisible = viewModel.shouldPeek
         }
         .onAppear {
             viewModel.setType(type: type)
