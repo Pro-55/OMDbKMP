@@ -12,7 +12,7 @@ struct NavHost: View {
     @StateObject private var viewModel = NavHostViewModel()
     @State private var stack: [Route] = []
     @State private var hasSignedUp: Bool?
-    @State private var isOverlayVisibile: Bool = false
+    @State private var isOverlayVisible: Bool = false
     
     var body: some View {
         NavigationStack(path: $stack) {
@@ -32,11 +32,11 @@ struct NavHost: View {
                 case .Search(let type):
                     SearchScreen(
                         type: type,
-                        isOverlayVisibile: $isOverlayVisibile,
+                        isOverlayVisible: $isOverlayVisible,
                         navigateSearchToDetails: { content in
                         }
                     )
-                    .navigationBarHidden(isOverlayVisibile)
+                    .navigationBarHidden(isOverlayVisible)
                 case .Details:
                     fatalError("Screens to be implemented")
                 }
