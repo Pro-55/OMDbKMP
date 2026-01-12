@@ -1,13 +1,13 @@
 package com.papslabs.omdb_kmp.util.extensions
 
 import com.papslabs.omdb_kmp.domain.model.DayPart
-import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atTime
 import kotlinx.datetime.toLocalDateTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.time.Clock
 
 class DateTimeExtensionsTest {
 
