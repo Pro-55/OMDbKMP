@@ -6,6 +6,7 @@ import com.papslabs.omdb_kmp.data.local.db.model.parse
 import com.papslabs.omdb_kmp.data.network.api.contract.OMDbKMPApi
 import com.papslabs.omdb_kmp.data.network.model.Response
 import com.papslabs.omdb_kmp.data.network.model.parse
+import com.papslabs.omdb_kmp.domain.model.Content
 import com.papslabs.omdb_kmp.domain.model.DayPart
 import com.papslabs.omdb_kmp.domain.model.Resource
 import com.papslabs.omdb_kmp.domain.model.SearchResult
@@ -15,6 +16,7 @@ import com.papslabs.omdb_kmp.domain.repository.MainRepository
 import com.papslabs.omdb_kmp.domain.shared_preferences.SharedPreferences
 import com.papslabs.omdb_kmp.util.Constants
 import com.papslabs.omdb_kmp.util.extensions.getPartOfDay
+import com.papslabs.omdb_kmp.util.extensions.isSuccessful
 import com.papslabs.omdb_kmp.util.wrappers.resourceFlow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDateTime
@@ -23,7 +25,7 @@ class MainRepositoryImpl(
     private val sp: SharedPreferences,
     private val db: AppDatabase,
     private val api: OMDbKMPApi
-): MainRepository {
+) : MainRepository {
 
     // Global
     private val TAG = MainRepositoryImpl::class.simpleName
@@ -124,17 +126,17 @@ class MainRepositoryImpl(
                 val body = result.data
                 val search = body?.search
                     ?.parse(type)
-                        ?: listOf()
+                    ?: listOf()
                 db.shortContentDao.insertAll(search)
                 val data = body?.parse(search)
-                        ?: SearchResult()
+                    ?: SearchResult()
                 emit(Resource.Success(data))
             }
             is Response.UnknownHostException -> {
                 val search = db.shortContentDao
                     .searchForType(type, "$query%")
                     ?.parse()
-                        ?: listOf()
+                    ?: listOf()
                 val total = search.size
                 val data = SearchResult(
                     search = search,
@@ -148,5 +150,60 @@ class MainRepositoryImpl(
             is Response.ServerException -> emit(Resource.Error(msg = result.msg))
             is Response.UnknownException -> emit(Resource.Error(msg = result.msg))
         }
+    }
+
+    override fun getDetails(
+        id: String,
+        plot: String
+    ): Flow<Resource<Content>> = resourceFlow {
+        val local = db.contentDao.get(id)
+
+        val result = api.getDetails(
+            id = id,
+            plot = plot
+        )
+
+        val msg = when (result) {
+            is Response.Success -> {
+                val network = result.data
+                if (network != null) {
+                    val isFavorite = local?.data
+                        ?.isFavorite
+                        ?: false
+                    val data = network.parse(isFavorite)
+                    val dataResult = db.contentDao
+                        .insert(data)
+                        .isSuccessful()
+
+                    val ratings = network.ratings
+                        ?.parse(id)
+                        ?: listOf()
+                    val ratingsResult = db.ratingDao
+                        .insertAll(ratings)
+                        .isSuccessful()
+
+                    val dbSuccess = dataResult && ratingsResult
+
+                    if (dbSuccess) {
+                        emit(Resource.Success(data.parse(ratings)))
+                        return@resourceFlow
+                    }
+                }
+                null
+            }
+            is Response.UnknownHostException -> {
+                if (local != null) {
+                    emit(Resource.Success(local.parse()))
+                    return@resourceFlow
+                }
+                null
+            }
+            is Response.InvalidPathException -> result.msg
+            is Response.InvalidRequestException -> result.msg
+            is Response.RequestTimeoutException -> result.msg
+            is Response.ServerException -> result.msg
+            is Response.UnknownException -> result.msg
+        }
+        emit(Resource.Error(msg ?: Constants.REQUEST_FAILED_MESSAGE))
     }
 }

@@ -1,6 +1,7 @@
 package com.papslabs.omdb_kmp.di
 
 import com.papslabs.omdb_kmp.domain.use_case.GetCurrentUserUseCase
+import com.papslabs.omdb_kmp.domain.use_case.GetDetailsUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetGreetingUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetSignUpStatusUseCase
 import com.papslabs.omdb_kmp.domain.use_case.SearchContentUseCase
@@ -14,4 +15,5 @@ val useCaseModule = module {
     factoryOf(::GetCurrentUserUseCase)
     factoryOf(::GetGreetingUseCase)
     factoryOf(::SearchContentUseCase)
+    factoryOf(::GetDetailsUseCase)
 }

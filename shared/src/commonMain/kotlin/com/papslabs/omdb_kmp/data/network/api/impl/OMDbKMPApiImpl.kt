@@ -1,6 +1,7 @@
 package com.papslabs.omdb_kmp.data.network.api.impl
 
 import com.papslabs.omdb_kmp.data.network.api.contract.OMDbKMPApi
+import com.papslabs.omdb_kmp.data.network.model.NetworkContent
 import com.papslabs.omdb_kmp.data.network.model.NetworkSearchResult
 import com.papslabs.omdb_kmp.data.network.model.Response
 import com.papslabs.omdb_kmp.domain.model.Type
@@ -12,7 +13,7 @@ import io.ktor.client.request.parameter
 
 class OMDbKMPApiImpl(
     private val client: HttpClient
-): OMDbKMPApi {
+) : OMDbKMPApi {
 
     override suspend fun searchContent(
         title: String,
@@ -24,6 +25,18 @@ class OMDbKMPApiImpl(
             parameter("s", title)
             parameter("type", type)
             parameter("page", page)
+        }
+        Response.Success(response)
+    }
+
+    override suspend fun getDetails(
+        id: String,
+        plot: String
+    ): Response<NetworkContent> = safeCall {
+        val response = client.get<NetworkContent> {
+            parameter("apiKey", BuildConfig.ApiKey)
+            parameter("i", id)
+            parameter("plot", plot)
         }
         Response.Success(response)
     }

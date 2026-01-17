@@ -1,6 +1,7 @@
 package com.papslabs.omdb_kmp.di
 
 import com.papslabs.omdb_kmp.domain.use_case.GetCurrentUserUseCase
+import com.papslabs.omdb_kmp.domain.use_case.GetDetailsUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetGreetingUseCase
 import com.papslabs.omdb_kmp.domain.use_case.GetSignUpStatusUseCase
 import com.papslabs.omdb_kmp.domain.use_case.SearchContentUseCase
@@ -24,7 +25,7 @@ fun init() {
     }
 }
 
-class UseCaseHelper: KoinComponent {
+class UseCaseHelper : KoinComponent {
     private val _getSignUpStatusUseCase: GetSignUpStatusUseCase by inject()
     val getSignUpStatusUseCase: GetSignUpStatusUseCase
         get() = _getSignUpStatusUseCase
@@ -44,4 +45,8 @@ class UseCaseHelper: KoinComponent {
     private val _searchContentUseCase: SearchContentUseCase by inject()
     val searchContentUseCase: SearchContentUseCase
         get() = _searchContentUseCase
+
+    private val _getDetailsUseCase: GetDetailsUseCase by inject()
+    val getDetailsUseCase: GetDetailsUseCase
+        get() = _getDetailsUseCase
 }

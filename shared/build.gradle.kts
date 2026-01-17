@@ -42,7 +42,6 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.core)
 
                 implementation(libs.koin.core)
-                implementation(libs.koin.test)
 
                 api(libs.datastore.core)
 
@@ -62,6 +61,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(libs.koin.test)
             }
         }
         val androidMain by getting {
