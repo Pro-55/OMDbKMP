@@ -20,3 +20,11 @@ extension String {
         }
     }
 }
+
+
+extension String? {
+    
+    func isNilOrEmpty() -> Bool {
+        return self?.isEmpty != false
+    }
+}

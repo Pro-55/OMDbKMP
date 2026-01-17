@@ -12,5 +12,8 @@ enum Route: Hashable {
     case Signup
     case Home
     case Search(type: Type)
-    case Details
+    case Details(
+        contentId: String? = nil,
+        shortContent: ShortContent? = nil
+    )
 }
