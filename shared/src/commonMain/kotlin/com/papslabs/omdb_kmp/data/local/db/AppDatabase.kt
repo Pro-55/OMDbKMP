@@ -4,8 +4,12 @@ import androidx.room.ConstructedBy
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.papslabs.omdb_kmp.data.local.db.dao.ContentDao
+import com.papslabs.omdb_kmp.data.local.db.dao.RatingDao
 import com.papslabs.omdb_kmp.data.local.db.dao.ShortContentDao
 import com.papslabs.omdb_kmp.data.local.db.dao.UserDao
+import com.papslabs.omdb_kmp.data.local.db.model.EntityContent
+import com.papslabs.omdb_kmp.data.local.db.model.EntityRating
 import com.papslabs.omdb_kmp.data.local.db.model.EntityShortContent
 import com.papslabs.omdb_kmp.data.local.db.model.EntityUser
 import com.papslabs.omdb_kmp.util.RoomTypeConverter
@@ -13,15 +17,19 @@ import com.papslabs.omdb_kmp.util.RoomTypeConverter
 @Database(
     entities = [
         EntityUser::class,
-        EntityShortContent::class
+        EntityShortContent::class,
+        EntityContent::class,
+        EntityRating::class
     ],
     version = 1
 )
 @TypeConverters(RoomTypeConverter::class)
 @ConstructedBy(AppDatabaseConstructor::class)
-abstract class AppDatabase: RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
     abstract val userDao: UserDao
     abstract val shortContentDao: ShortContentDao
+    abstract val contentDao: ContentDao
+    abstract val ratingDao: RatingDao
 
 }

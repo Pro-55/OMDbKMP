@@ -122,6 +122,17 @@
         }
       }
     },
+    "label_details" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        }
+      }
+    },
     "label_movies" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -129,6 +140,49 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Movies"
+          }
+        }
+      }
+    },
+    "label_plot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plot"
+          }
+        }
+      }
+    },
+    "label_ratings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ratings"
+          }
+        }
+      }
+    },
+    "label_season %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Season %lld"
+          }
+        }
+      }
+    },
+    "label_seasons" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seasons"
           }
         }
       }
@@ -143,7 +197,17 @@
           }
         }
       }
+    },
+    "label_team" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Team"
+          }
+        }
+      }
     }
   },
-  "version" : "1.0"
+  "version" : "1.1"
 }

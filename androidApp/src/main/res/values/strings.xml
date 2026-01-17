@@ -6,6 +6,15 @@
     <string name="label_movies">Movies</string>
     <string name="label_series">Series</string>
     <string name="label_episodes">Episodes</string>
+    <string name="label_plot">Plot</string>
+    <string name="label_cast">Cast</string>
+    <string name="label_crew">Crew</string>
+    <string name="label_director">Director</string>
+    <string name="label_production">Production</string>
+    <string name="label_seasons">Seasons</string>
+    <string name="label_ratings">Ratings</string>
+    <string name="label_team">Team</string>
+    <string name="label_details">Details</string>
 
     <string name="hint_first_name">First Name</string>
     <string name="hint_last_name">Last Name</string>
@@ -20,4 +29,6 @@
     <string name="cd_search">Search</string>
     <string name="cd_cancel">Cancel</string>
     <string name="cd_poster">Poster</string>
+    <string name="cd_back_button">Back Button</string>
+    <string name="cd_share_button">Share Button</string>
 </resources>

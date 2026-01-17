@@ -1,5 +1,6 @@
 package com.papslabs.omdb_kmp.domain.repository
 
+import com.papslabs.omdb_kmp.domain.model.Content
 import com.papslabs.omdb_kmp.domain.model.Resource
 import com.papslabs.omdb_kmp.domain.model.SearchResult
 import com.papslabs.omdb_kmp.domain.model.Type
@@ -29,4 +30,9 @@ interface MainRepository {
         page: Int,
         type: Type
     ): Flow<Resource<SearchResult>>
+
+    fun getDetails(
+        id: String,
+        plot: String
+    ): Flow<Resource<Content>>
 }

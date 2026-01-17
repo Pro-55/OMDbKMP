@@ -34,11 +34,22 @@ struct NavHost: View {
                         type: type,
                         isOverlayVisible: $isOverlayVisible,
                         navigateSearchToDetails: { content in
+                            stack.append(.Details(shortContent: content))
                         }
                     )
                     .navigationBarHidden(isOverlayVisible)
-                case .Details:
-                    fatalError("Screens to be implemented")
+                case .Details(
+                    let contentId,
+                    let shortContent
+                ):
+                    DetailsScreen(
+                        contentId: contentId,
+                        shortContent: shortContent,
+                        onBack: {
+                            stack.removeLast()
+                        }
+                    )
+                    .navigationBarBackButtonHidden(true)
                 }
             }
         }
