@@ -1,6 +1,7 @@
 package com.papslabs.omdb_kmp.android.di
 
 import com.papslabs.omdb_kmp.android.ui.authentication.SignUpViewModel
+import com.papslabs.omdb_kmp.android.ui.details.DetailsViewModel
 import com.papslabs.omdb_kmp.android.ui.home.HomeViewModel
 import com.papslabs.omdb_kmp.android.ui.router.RouterViewModel
 import com.papslabs.omdb_kmp.android.ui.search.SearchViewModel
@@ -12,4 +13,5 @@ val viewModelModule = module {
     viewModelOf(::SignUpViewModel)
     viewModelOf(::HomeViewModel)
     viewModelOf(::SearchViewModel)
+    viewModelOf(::DetailsViewModel)
 }

@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.gradle)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
 }
@@ -86,6 +87,8 @@ dependencies {
 
     implementation(libs.coil.compose)
     implementation(libs.coil.network)
+
+    implementation(libs.kotlinx.serialization)
 }
 
 fun getVersionCode(): Int {

@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.papslabs.omdb_kmp.android.framework.navigation.Route
 import com.papslabs.omdb_kmp.android.framework.navigation.Screen
+import com.papslabs.omdb_kmp.android.ui.details.DetailsScreen
 import com.papslabs.omdb_kmp.android.ui.home.HomeScreen
 import com.papslabs.omdb_kmp.android.ui.search.SearchScreen
 import com.papslabs.omdb_kmp.domain.model.Type
@@ -40,7 +41,24 @@ fun NavGraphBuilder.appNavGraph(
             arguments = Screen.Search.arguments
         ) {
             SearchScreen(
-                navigateSearchToDetails = {}
+                navigateSearchToDetails = {
+                    navController.navigate(
+                        route = Screen.Details.getPath(shortContent = it)
+                    )
+                }
+            )
+        }
+        composable(
+            route = Screen.Details.getPath(),
+            arguments = Screen.Details.arguments
+        ) {
+            DetailsScreen(
+                onBack = onBack,
+                navigateDetailsToFullPoster = {},
+                navigateDetailsToRatings = {},
+                navigateDetailsToTeamDetails = {},
+                navigateDetailsToEpisodes = { contentId, season ->
+                }
             )
         }
     }

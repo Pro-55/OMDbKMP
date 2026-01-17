@@ -1,27 +1,30 @@
 package com.papslabs.omdb_kmp.android.framework.navigation
 
+import android.net.Uri
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
+import com.papslabs.omdb_kmp.domain.model.ShortContent
 import com.papslabs.omdb_kmp.domain.model.Type
+import kotlinx.serialization.json.Json
 
 sealed class Screen(
     val route: String,
     val arguments: List<NamedNavArgument> = emptyList()
 ) {
-    data object Router: Screen(
+    data object Router : Screen(
         route = "screen_router"
     )
 
-    data object SignUp: Screen(
+    data object SignUp : Screen(
         route = "screen_sign_up"
     )
 
-    data object Home: Screen(
+    data object Home : Screen(
         route = "screen_home"
     )
 
-    data object Search: Screen(
+    data object Search : Screen(
         route = "screen_search",
         arguments = listOf(
             navArgument(name = "category") {
@@ -38,23 +41,56 @@ sealed class Screen(
             .toString()
     }
 
-    data object Details: Screen(
-        route = "screen_details"
-    )
+    data object Details : Screen(
+        route = "screen_details",
+        arguments = listOf(
+            navArgument(name = "shortContent") {
+                type = NavType.StringType
+                nullable = true
+            },
+            navArgument(name = "contentId") {
+                type = NavType.StringType
+                nullable = true
+            }
+        )
+    ) {
+        fun getPath(
+            shortContent: ShortContent? = null,
+            contentId: String? = null
+        ): String = StringBuilder(route)
+            .append("?")
+            .apply {
+                when {
+                    shortContent == null && contentId == null -> append("shortContent={shortContent}")
+                        .append("&")
+                        .append("contentId={contentId}")
+                    shortContent != null -> {
+                        val content = Uri.encode(Json.encodeToString(shortContent))
+                        append("shortContent=$content")
+                            .append("&")
+                            .append("contentId=null")
+                    }
+                    else -> append("contentId=$contentId")
+                        .append("&")
+                        .append("shortContent=null")
+                }
+            }
+            .toString()
+    }
 
-    data object FullPoster: Screen(
+    data object FullPoster : Screen(
         route = "screen_full_screen"
     )
 
-    data object Ratings: Screen(
+    data object Ratings : Screen(
         route = "screen_ratings"
     )
 
-    data object TeamDetails: Screen(
+    data object TeamDetails : Screen(
         route = "screen_team_details"
     )
 
-    data object Episodes: Screen(
+    data object Episodes : Screen(
         route = "screen_episodes"
     )
 }
