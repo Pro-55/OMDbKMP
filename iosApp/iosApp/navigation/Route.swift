@@ -16,4 +16,7 @@ enum Route: Hashable {
         contentId: String? = nil,
         shortContent: ShortContent? = nil
     )
+    case Ratings(
+        ratings: [Rating]? = nil
+    )
 }

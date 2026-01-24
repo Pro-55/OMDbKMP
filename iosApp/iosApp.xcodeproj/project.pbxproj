@@ -13,6 +13,9 @@
 		1576003A2ACC74AC00B17CDB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 157600392ACC74AC00B17CDB /* FirebaseAnalytics */; };
 		1576003E2ACC74AC00B17CDB /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1576003D2ACC74AC00B17CDB /* FirebaseAnalyticsSwift */; };
 		1577228C2F16BC31008F5EFA /* SeasonChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577228B2F16BC31008F5EFA /* SeasonChip.swift */; };
+		159EB1072F23F7C7003F2258 /* RatingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EB1062F23F7C7003F2258 /* RatingsScreen.swift */; };
+		159EB1092F23F7D7003F2258 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EB1082F23F7D7003F2258 /* RatingsView.swift */; };
+		159EB10B2F23F7ED003F2258 /* RatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EB10A2F23F7ED003F2258 /* RatingsViewModel.swift */; };
 		15D0EAF52ACB532D00800946 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EAF42ACB532D00800946 /* iOSApp.swift */; };
 		15D0EAF92ACB539B00800946 /* NavHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EAF82ACB539B00800946 /* NavHost.swift */; };
 		15D0EAFB2ACB53AF00800946 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0EAFA2ACB53AF00800946 /* Route.swift */; };
@@ -67,6 +70,9 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1577228B2F16BC31008F5EFA /* SeasonChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonChip.swift; sourceTree = "<group>"; };
+		159EB1062F23F7C7003F2258 /* RatingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsScreen.swift; sourceTree = "<group>"; };
+		159EB1082F23F7D7003F2258 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		159EB10A2F23F7ED003F2258 /* RatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsViewModel.swift; sourceTree = "<group>"; };
 		15BF08F72ACC89080050F8CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15BF08F92ACC89340050F8CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15D0EAF42ACB532D00800946 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 				15BF08F72ACC89080050F8CE /* GoogleService-Info.plist */,
 			);
 			path = debug;
+			sourceTree = "<group>";
+		};
+		159EB1052F23F780003F2258 /* ratings */ = {
+			isa = PBXGroup;
+			children = (
+				159EB1062F23F7C7003F2258 /* RatingsScreen.swift */,
+				159EB1082F23F7D7003F2258 /* RatingsView.swift */,
+				159EB10A2F23F7ED003F2258 /* RatingsViewModel.swift */,
+			);
+			path = ratings;
 			sourceTree = "<group>";
 		};
 		15BF08F62ACC88FE0050F8CE /* release */ = {
@@ -306,6 +322,7 @@
 				F3D941442CE276BE00F082E2 /* DetailsView.swift */,
 				F3D941462CE283C800F082E2 /* DetailsViewModel.swift */,
 				F313ED102CE91FD600978103 /* MoreInfoView.swift */,
+				159EB1052F23F780003F2258 /* ratings */,
 			);
 			path = details;
 			sourceTree = "<group>";
@@ -461,6 +478,7 @@
 				15D0EAFB2ACB53AF00800946 /* Route.swift in Sources */,
 				F313ED0F2CE91FBE00978103 /* ContentInfoView.swift in Sources */,
 				F35CDD6F2C9F613800AB6E35 /* ContentGrid.swift in Sources */,
+				159EB1072F23F7C7003F2258 /* RatingsScreen.swift in Sources */,
 				15D0EB042ACB544200800946 /* SignUpScreen.swift in Sources */,
 				F38952162C9EEA1A00A6C62B /* SearchViewModel.swift in Sources */,
 				F3D941472CE283C800F082E2 /* DetailsViewModel.swift in Sources */,
@@ -482,6 +500,8 @@
 				F3C472782D108A9C0060C25F /* ActionBar.swift in Sources */,
 				F35CDD742C9F66B600AB6E35 /* Glide.swift in Sources */,
 				F36598F82CA8853000FC7874 /* ProImage.swift in Sources */,
+				159EB1092F23F7D7003F2258 /* RatingsView.swift in Sources */,
+				159EB10B2F23F7ED003F2258 /* RatingsViewModel.swift in Sources */,
 				F34222D52C99C2D40012C8FB /* SignUpView.swift in Sources */,
 				F3608ED72CA5DEF800B4A7C5 /* HoldGestureDetector.swift in Sources */,
 				F359C9C12DA14488004454D7 /* RatingBar.swift in Sources */,

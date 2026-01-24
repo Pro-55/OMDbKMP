@@ -47,6 +47,19 @@ struct NavHost: View {
                         shortContent: shortContent,
                         onBack: {
                             stack.removeLast()
+                        },
+                        navigateDetailsToRatings: { ratings in
+                            stack.append(.Ratings(ratings: ratings))
+                        }
+                    )
+                    .navigationBarBackButtonHidden(true)
+                case .Ratings(
+                    let ratings
+                ):
+                    RatingsScreen(
+                        ratings: ratings ?? [],
+                        onBack: {
+                            stack.removeLast()
                         }
                     )
                     .navigationBarBackButtonHidden(true)

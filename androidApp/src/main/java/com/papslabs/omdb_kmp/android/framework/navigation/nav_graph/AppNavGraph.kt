@@ -7,6 +7,7 @@ import androidx.navigation.compose.navigation
 import com.papslabs.omdb_kmp.android.framework.navigation.Route
 import com.papslabs.omdb_kmp.android.framework.navigation.Screen
 import com.papslabs.omdb_kmp.android.ui.details.DetailsScreen
+import com.papslabs.omdb_kmp.android.ui.details.ratings.RatingsScreen
 import com.papslabs.omdb_kmp.android.ui.home.HomeScreen
 import com.papslabs.omdb_kmp.android.ui.search.SearchScreen
 import com.papslabs.omdb_kmp.domain.model.Type
@@ -55,11 +56,21 @@ fun NavGraphBuilder.appNavGraph(
             DetailsScreen(
                 onBack = onBack,
                 navigateDetailsToFullPoster = {},
-                navigateDetailsToRatings = {},
+                navigateDetailsToRatings = {
+                    navController.navigate(
+                        route = Screen.Ratings.getPath(ratings = it)
+                    )
+                },
                 navigateDetailsToTeamDetails = {},
                 navigateDetailsToEpisodes = { contentId, season ->
                 }
             )
+        }
+        composable(
+            route = Screen.Ratings.getPath(),
+            arguments = Screen.Ratings.arguments
+        ) {
+            RatingsScreen(onBack = onBack)
         }
     }
 }
