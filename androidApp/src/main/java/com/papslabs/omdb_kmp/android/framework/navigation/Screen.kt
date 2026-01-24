@@ -4,6 +4,7 @@ import android.net.Uri
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
+import com.papslabs.omdb_kmp.domain.model.Rating
 import com.papslabs.omdb_kmp.domain.model.ShortContent
 import com.papslabs.omdb_kmp.domain.model.Type
 import kotlinx.serialization.json.Json
@@ -83,8 +84,27 @@ sealed class Screen(
     )
 
     data object Ratings : Screen(
-        route = "screen_ratings"
-    )
+        route = "screen_ratings",
+        arguments = listOf(
+            navArgument(name = "ratings") {
+                type = NavType.StringType
+            }
+        )
+    ) {
+        fun getPath(
+            ratings: List<Rating>? = null
+        ): String = StringBuilder(route)
+            .append("?")
+            .append("ratings=")
+            .apply {
+                if (ratings == null) {
+                    append("{ratings}")
+                } else {
+                    append(Uri.encode(Json.encodeToString(ratings)))
+                }
+            }
+            .toString()
+    }
 
     data object TeamDetails : Screen(
         route = "screen_team_details"
