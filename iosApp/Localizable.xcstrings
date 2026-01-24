@@ -144,6 +144,17 @@
         }
       }
     },
+    "label_no_ratings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Ratings"
+          }
+        }
+      }
+    },
     "label_plot" : {
       "extractionState" : "manual",
       "localizations" : {

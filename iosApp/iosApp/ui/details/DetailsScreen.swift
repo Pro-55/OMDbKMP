@@ -13,6 +13,7 @@ struct DetailsScreen: View {
     let contentId: String?
     let shortContent: ShortContent?
     let onBack: () -> Void
+    let navigateDetailsToRatings: ([Rating]) -> Void
     
     var body: some View {
         DetailsView(
@@ -26,7 +27,7 @@ struct DetailsScreen: View {
                 print("TestLog: poster => \(poster ?? "nil")")
             },
             onRatingsClicked: { ratings in
-                print("TestLog: ratings => \(ratings.count)")
+                navigateDetailsToRatings(ratings)
             },
             onTeamClicked: { teamDetails in
                 print("TestLog: teamDetails => \(teamDetails)")
